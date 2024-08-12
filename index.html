@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu & Student Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="date"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <h1>Responsive Menu & Student Application Form</h1>
+</header>
+
+<nav id="nav">
+    <a id="nav-home" href="#">Home</a>
+    <a id="nav-about" href="#">About</a>
+    <a id="nav-services" href="#">Services</a>
+    <a id="nav-contact" href="#">Contact</a>
+</nav>
+
+<div id="content" class="content">
+    <h2 id="welcome-message">Welcome to our website!</h2>
+    <p id="description">This is a simple responsive page with a menu and a student application form.</p>
+
+    <div id="form-container" class="form-container">
+        <h2 id="form-title">Student Application Form</h2>
+        <form id="student-form">
+            <label for="student-name">Full Name</label>
+            <input id="student-name" type="text" name="name" required>
+
+            <label for="student-email">Email Address</label>
+            <input id="student-email" type="email" name="email" required>
+
+            <label for="student-dob">Date of Birth</label>
+            <input id="student-dob" type="date" name="dob" required>
+
+            <label for="student-gender">Gender</label>
+            <select id="student-gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="student-course">Course Applying For</label>
+            <input id="student-course" type="text" name="course" required>
+
+            <input id="submit-button" type="submit" value="Submit Application">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
